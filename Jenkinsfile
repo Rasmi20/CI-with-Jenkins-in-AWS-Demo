@@ -16,4 +16,12 @@ node('Node02'){
         mvn clean install
       '''
    }
+  
+  stage('Static Code Analysis'){
+       sh '''
+       source /etc/profile.d/maven.sh
+       cd /var/lib/jenkins/workspace/try_jenkinsfile;
+       mvn clean verify sonar:sonar
+       '''
+   }
 }
