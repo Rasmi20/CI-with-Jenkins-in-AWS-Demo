@@ -5,8 +5,8 @@ node('Node02'){
      
  }
   stage('build & Package')
-     def mvnHome
-     mvnHome = tool 'M3'
+     //def mvnHome
+     //mvnHome = tool 'M3'
      sh ''' 
         source /etc/profile.d/maven.sh
         
