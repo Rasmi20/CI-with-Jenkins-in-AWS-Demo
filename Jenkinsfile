@@ -4,4 +4,16 @@ node('Node02'){
      checkout scm
      
  }
+  stage('build & Package')
+     def mvnHome
+     mvnHome = tool 'M3'
+     sh ''' 
+        source /etc/profile.d/maven.sh
+        
+
+        cd /var/lib/jenkins/workspace/try_jenkinsfile;
+
+        mvn clean install
+      '''
    }
+}
