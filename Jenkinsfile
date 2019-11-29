@@ -4,7 +4,7 @@ node('Node02'){
      checkout scm
      
  }
-  stage('build & Package')
+  stage('build & Package') {
      //def mvnHome
      //mvnHome = tool 'M3'
      sh ''' 
